@@ -5,7 +5,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use("/api/v1/blog", require("./routes/blogs"));
-app.use("/api/v1/campaign", require("./routes/campaigns"));
+app.use("/api/v1/blogs", require("./routes/blogs"));
+app.use("/api/v1/campaigns/creditcard", require("./routes/campaigns/creditCard.router"));
+app.use("/api/v1/campaigns/homeloan", require("./routes/campaigns/homeLoan.router"));
 
 module.exports = app;
